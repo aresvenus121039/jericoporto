@@ -1,6 +1,8 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 // components
-import AnimatedLottie from '../components/Lottie';
+// import AnimatedLottie from '../components/Lottie';
+const AnimatedLottie = dynamic(() => import('../components/Lottie'), { ssr: false });
 import TechSkillIcon from '../components/skills/TechIcon';
 import ListItem from '../components/skills/ListItem';
 import HeadingAnimate from '../components/animate/HeadingAnimate';
